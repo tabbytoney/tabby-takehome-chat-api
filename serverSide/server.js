@@ -1,9 +1,11 @@
 const express = require('express');
 const { convos } = require('./dummyData/dummyData');
 const dotenv = require('dotenv');
+const dbConnection = require('./dbConfig/database');
 
-const app = express();
 dotenv.config();
+dbConnection();
+const app = express();
 
 // the apis
 app.get('/', (req, res) => {
