@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Define what info we need from a single chat
-const convoModel = mongoose.Schema(
+const convoSchema = mongoose.Schema(
   {
     convoName: { type: String, trim: true },
     // using objectId for the id for a particular user/msg, etc
@@ -21,5 +21,5 @@ const convoModel = mongoose.Schema(
   }
 );
 
-const Convo = mongoose.model('Convo', convoModel);
+const Convo = mongoose.model('Convo', convoSchema);
 model.exports = Convo;

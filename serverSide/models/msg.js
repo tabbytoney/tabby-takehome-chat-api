@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Define what info we need from a msg
-const msgModel = mongoose.Schema(
+const msgSchema = mongoose.Schema(
   {
     sender: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     content: { type: String, trim: true },
@@ -15,5 +15,5 @@ const msgModel = mongoose.Schema(
   }
 );
 
-const Msg = mongoose.model('Msg', msgModel);
+const Msg = mongoose.model('Msg', msgSchema);
 model.exports = Msg;
