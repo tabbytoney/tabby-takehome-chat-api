@@ -49,4 +49,8 @@ If I had more time, I would:
 7. Functionality for group chats would be pretty easy to add to have messages between more than two users. 
 8. Real time notifications to show on the app and also on the browser tab.
 
+## General Notes:
+- I normally don't clutter the code with this many comments but I wished to err on the side of overcommunication in case a choice was unclear. 
+-I decided to break up the controllers into their own file. I've done projects where everything was included in the Routes files, but they quickly became giant and difficult to manage. 
+
 
