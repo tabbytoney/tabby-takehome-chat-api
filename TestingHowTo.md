@@ -1,1 +1,0 @@
-Register and get user token.png
