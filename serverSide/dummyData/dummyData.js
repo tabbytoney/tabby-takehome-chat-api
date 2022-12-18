@@ -1,6 +1,5 @@
 const convos = [
   {
-    isGroupChat: false,
     users: [
       {
         name: 'Mario Mario',
@@ -12,10 +11,9 @@ const convos = [
       },
     ],
     _id: '234ro23ufn234hn',
-    chatName: 'MarioLuigi',
+    convoName: 'MarioLuigi',
   },
   {
-    isGroupChat: false,
     users: [
       {
         name: 'Luigi Mario',
@@ -27,7 +25,7 @@ const convos = [
       },
     ],
     _id: '234ro23ufn2fese2q3w3',
-    chatName: 'LuigiToad',
+    convoName: 'LuigiToad',
   },
 ];
 

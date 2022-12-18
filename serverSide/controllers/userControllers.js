@@ -25,6 +25,7 @@ const regUser = asyncHandler(async (req, res) => {
     name,
     email,
     password,
+    // pic
   });
 
   if (user) {
@@ -62,4 +63,22 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { regUser, authUser };
+// /user?search=...
+const everyUser = asyncHandler(async (req, res) => {
+  // if something is in the search, search the user in their name or email
+  // $or is a mongodb thing
+  // $optionsL 'i' would make it it case sensitive
+  const searchTerm = req.query.search
+    ? {
+        $or: [
+          { name: { $regex: req.query.search } },
+          { email: { $regex: req.query.search } },
+        ],
+      }
+    : {}; // if nothing is found, do nothing
+
+  const users = await User.find(searchTerm);
+  res.send(users);
+});
+
+module.exports = { regUser, authUser, everyUser };
