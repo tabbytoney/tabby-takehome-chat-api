@@ -9,6 +9,10 @@ const msgSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Convo',
     },
+    updatedAt: {
+      type: String,
+      trim: true,
+    },
   },
   {
     timestamps: true,
@@ -16,4 +20,4 @@ const msgSchema = mongoose.Schema(
 );
 
 const Msg = mongoose.model('Msg', msgSchema);
-model.exports = Msg;
+module.exports = Msg;
