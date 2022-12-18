@@ -63,6 +63,7 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
+// 9. Above list of conversations can accept parameters which allow for filtering conversations by user and/or range of time
 // /user?search=...
 const everyUser = asyncHandler(async (req, res) => {
   // if something is in the search, search the user in their name or email
