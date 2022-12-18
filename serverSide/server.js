@@ -1,8 +1,8 @@
 const express = require('express');
-const { convos } = require('./dummyData/dummyData');
 const dotenv = require('dotenv');
 const userRoutes = require('./routes/userRoutes');
 const dbConnection = require('./dbConfig/database');
+const msgRoutes = require('./routes/msgRoutes');
 const convoRoutes = require('./routes/convoRoutes');
 
 dotenv.config();
@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 
 app.use('/user', userRoutes);
 app.use('/convo', convoRoutes);
+app.use('/msg', msgRoutes);
 
 const port = process.env.PORT;
 
