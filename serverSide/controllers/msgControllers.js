@@ -58,4 +58,16 @@ const allMsgs = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { sendMsg, allMsgs };
+// search messages for a particular string
+const searchMsg = asyncHandler(async (req, res) => {
+  try {
+    const searchString = { search: req.query.search };
+    const msgs = await Msg.find(searchString);
+    res.send(msgs);
+  } catch (error) {
+    res.status(400);
+    throw new Error(error.message);
+  }
+});
+
+module.exports = { sendMsg, allMsgs, searchMsg };
