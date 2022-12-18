@@ -29,3 +29,10 @@ I created the server with ExpressJS
 I have created a Postman collection that you should be able to use for testing, it will also be included in the email (again let me know if you dont receive it). Once you download it, all you have to do is open Postman > Click Import > select that file. 
 
 <img width="1600" alt="Import Collection to Postman" src="https://user-images.githubusercontent.com/60009709/208323395-89a91f59-7aba-4e39-be6b-5de28afa9bda.png">
+
+You'll need to register or log in a user to get their auth token. After that, for the other calls, paste the token into Authorization tab > dropdown select Bearer Token. 
+
+<img width="1728" alt="pasting the token" src="https://user-images.githubusercontent.com/60009709/208323811-ede1cdfa-603a-4054-a1bd-1a6299b7f134.png">
+
+
+
