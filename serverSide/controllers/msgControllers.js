@@ -3,6 +3,8 @@ const Msg = require('../models/msg');
 const User = require('../models/user');
 const Convo = require('../models/convo');
 
+// 10. API supports sending/receiving messages
+
 const sendMsg = asyncHandler(async (req, res) => {
   // sender of the msg = the logged in user
   const { content, convoId } = req.body;
@@ -14,6 +16,7 @@ const sendMsg = asyncHandler(async (req, res) => {
   }
 
   let newMsg = {
+    // 7. Users are participants in conversations, they can send and receive messages
     sender: req.user._id,
     content: content,
     convo: convoId,
@@ -44,6 +47,7 @@ const sendMsg = asyncHandler(async (req, res) => {
   }
 });
 
+// 8. API supports getting a list of conversations that could be consumed by a UI
 // get all messages in a certain convo
 const allMsgs = asyncHandler(async (req, res) => {
   try {
@@ -58,6 +62,7 @@ const allMsgs = asyncHandler(async (req, res) => {
   }
 });
 
+// 11. API supports searching conversations for a particular string
 // search messages for a particular string
 const searchMsg = asyncHandler(async (req, res) => {
   try {

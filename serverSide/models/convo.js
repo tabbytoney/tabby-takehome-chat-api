@@ -1,9 +1,11 @@
+// 2. App has conversations
 const mongoose = require('mongoose');
 
 // Define what info we need from a single convo
 const convoSchema = mongoose.Schema(
   {
     convoName: { type: String, trim: true },
+    // 6. Conversations have participant (users) and messages
     // using objectId for the id for a particular user/msg, etc
     users: [
       {

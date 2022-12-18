@@ -1,3 +1,5 @@
+// 1. App has users
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
